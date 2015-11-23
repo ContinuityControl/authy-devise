@@ -57,6 +57,8 @@ initializers/authy.rb
 
 # For RBENV
 .ruby-version
+.ruby-gemset
 
 # For RubyMine
 .idea
+
