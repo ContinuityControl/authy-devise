@@ -1,13 +1,17 @@
 module DeviseAuthy
   module Views
     module Helpers
-      def authy_request_phone_call_link
-        link_to(
-          I18n.t('request_phone_call', { :scope => 'devise' }),
-          url_for([resource_name, :request_phone_call]),
+      def authy_request_phone_call_link(opts={})
+        opts = {
           :id => "authy-request-phone-call-link",
           :method => :post,
           :remote => true
+        }.merge(opts)
+
+        link_to(
+          I18n.t('request_phone_call', { :scope => 'devise' }),
+          url_for([resource_name, :request_phone_call]),
+          opts
         )
       end
 
