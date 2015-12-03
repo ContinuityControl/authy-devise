@@ -58,7 +58,8 @@ class Devise::DeviseAuthyController < DeviseController
     @authy_user = Authy::API.register_user(
       :email => resource.email,
       :cellphone => params[:cellphone],
-      :country_code => params[:country_code]
+      :country_code => params[:country_code],
+      :send_install_link_via_sms => false
     )
 
     if @authy_user.ok?

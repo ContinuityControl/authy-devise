@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem "devise"
-gem 'authy'
+gem 'authy', git: 'https://github.com/ContinuityControl/authy-ruby.git', tag: 'send-sms-install-link'
 
 group :development do
   gem "rspec"
