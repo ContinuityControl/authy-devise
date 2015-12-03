@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem "devise"
-gem 'authy'
+gem 'authy', github: 'ContinuityControl/authy-ruby'
 
 group :development do
   gem "rspec"
